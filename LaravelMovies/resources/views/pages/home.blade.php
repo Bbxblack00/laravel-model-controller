@@ -2,6 +2,12 @@
 
 @section('principal')
 
-<h1>hello</h1>
+    @foreach ($movies as $movie)
+
+    <a href="{{ route ('film', $movie -> id) }}">
+        {{ $movie -> title }} <br>
+    </a>
+        
+    @endforeach
     
 @endsection
